@@ -17,7 +17,7 @@ cp .env.template .env
 ### Required Environment Variables:
 - `OPENAI_API_KEY`: Your OpenAI API key for the AI model
 - `WALLET_PRIVATE_KEY`: Your wallet's private key (with 0x prefix)
-- `RPC_PROVIDER_URL`: EVM network RPC URL (with Base)
+- `RPC_PROVIDER_URL`: EVM network RPC URL (with sepolia mantle)
 
 ## Usage
 
@@ -38,10 +38,4 @@ what's the underlying token of the vault 0x28c52E6c053AD4F2727E2F8de2AD5B81139ca
 deposit 111 into the vault 0x28c52E6c053AD4F2727E2F8de2AD5B81139ca9D4 as my wallet address as receiver
 what's my wallet address's max witdrawal amount of the vault SozuHausResidentVault
 withdraw the max amount to my wallet address from the vault SozuHausResidentVault
-
-3. Understanding responses:
-   - Transaction confirmations
-   - Balance updates
-   - Trade quotes
-   - Error messages
-   - Operation status
+```

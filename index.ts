@@ -1,17 +1,13 @@
 import readline from "node:readline";
-
 import { openai } from "@ai-sdk/openai";
 import { generateText } from "ai";
-
 import { http, createWalletClient } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { mantleSepoliaTestnet } from "viem/chains";
-
 import { getOnChainTools } from "@goat-sdk/adapter-vercel-ai";
 import { Token, erc20 } from "@goat-sdk/plugin-erc20";
 //import { erc4626, Vault } from "@goat-sdk/plugin-erc4626";
 import { erc4626, Vault } from "./erc4626";
-
 import { sendETH } from "@goat-sdk/wallet-evm";
 import { viem } from "@goat-sdk/wallet-viem";
 
@@ -57,12 +53,6 @@ const sozuHausResidentVault: Vault = {
             sendETH(), // Enable ETH transfers
             erc20({ tokens: [sozuHausResident] }), // Enable ERC20 token operations
             erc4626({ vaults: [sozuHausResidentVault] }), // Enable ERC4626 vault operations
-            /*
-            uniswap({
-                baseUrl: process.env.UNISWAP_BASE_URL as string,
-                apiKey: process.env.UNISWAP_API_KEY as string,
-            }), // Enable Uniswap trading
-            */
         ],
     });
 
